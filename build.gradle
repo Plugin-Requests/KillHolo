@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'net.savagedev'
+version '1.0.1-Java-8-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots' }
+    maven { url 'https://repo.codemc.io/repository/maven-public/' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
+    compileOnly 'com.gmail.filoghost.holographicdisplays:holographicdisplays-api:2.4.0'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from(sourceSets.main.resources.srcDirs) {
+        expand 'version': project.version
+        include 'plugin.yml'
+    }
+}

@@ -1,0 +1,13 @@
+# What should the hologram say? You can add as many lines as you'd like.
+holograms:
+  good-fight: # Hologram name. This is just to keep proper YAML formatting.
+    - '&aGood fight, %killer%'
+    - '&cRIP %dead%'
+  rip:
+    - '&cRIP %dead%'
+  l:
+    - '&7%dead% took the L to %killer%'
+  # etc...
+
+# How many ticks should the hologram appear for? Default: 60 (3 seconds)
+hologram-expire: 60

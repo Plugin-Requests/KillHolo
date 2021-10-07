@@ -1,0 +1,10 @@
+name: KillHolo
+description: Creates a hologram when a player kills another player.
+
+author: SavageAvocado
+website: https://www.savagedev.net/
+
+version: ${version}
+main: net.savagedev.killholo.KillHolo
+
+softdepend: [ HolographicDisplays ]
